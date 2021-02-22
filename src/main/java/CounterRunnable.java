@@ -14,9 +14,8 @@ public class CounterRunnable implements Runnable {
         String runnableThreadName = "Runnable " + Thread.currentThread().getName();
         logger.info(runnableThreadName + " has started");
         while (counter.getCount() < ITERATIONS) {
-            int currentIteration = counter.getCount();
+            int currentIteration = counter.increment();
             logger.info(runnableThreadName + " - " + currentIteration);
-            counter.setCount(++currentIteration);
         }
         logger.info(runnableThreadName + " has stopped");
     }

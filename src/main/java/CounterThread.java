@@ -15,9 +15,8 @@ public class CounterThread extends Thread {
         String threadName = "Thread " + Thread.currentThread().getName();
         logger.info(threadName + " has started");
         while (counter.getCount() < ITERATIONS) {
-            int currentIteration = counter.getCount();
+            int currentIteration = counter.increment();
             logger.info(threadName + " - " + currentIteration);
-            counter.setCount(++currentIteration);
         }
         logger.info(threadName + " has stopped");
     }
