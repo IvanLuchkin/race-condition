@@ -1,2 +1,5 @@
 /.idea/*
 race-condition.iml
+/.gradle/*
+/out/*
+/build/*
